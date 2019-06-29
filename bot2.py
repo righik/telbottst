@@ -39,11 +39,11 @@ def vbr(message):
             komgl = message.text + '_' + str(message.message_id)
             bot.send_message(message.chat.id, koment, reply_markup=markup)
         elif message.text == 'оплатил':
-            url = 'https://edge.qiwi.com/payment-history/v2/persons/79688569979/payments?rows=1'
+            url = 'https://edge.qiwi.com/payment-history/v2/persons/nomer/payments?rows=1'
             headers = {
                     'Accept' : 'application/json',
                     'Content-Type' : 'application/json',
-                    'Authorization' : 'Bearer b7d35b2d6f69cba9e806d22e1a2aa87a'
+                    'Authorization' : 'Bearer token'
             }
             r = requests.get(url, headers = headers)
             r.raise_for_status() # do not create the result file until json is parsed
