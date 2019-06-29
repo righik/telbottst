@@ -4,7 +4,7 @@ import telebot
 import config
 import requests
 import json
-import random
+#import random думаю потом использовать для коммента к платежу
 from telebot import types
 bot = telebot.TeleBot(config.token)
 
@@ -20,9 +20,9 @@ def cmd_start(message):
 def vbr(message):
         global cost 
         if message.text == 'мак':
-            mkcost = 1
-            cost = mkcost
-            markup = types.ReplyKeyboardMarkup()
+            mkcost = 1   
+            cost = mkcost 
+            markup = types.ReplyKeyboardMarkup() 
             itembtn1 = types.KeyboardButton('оплатил')
             markup.add(itembtn1)
             koment = 'rekvizity_qiwi: +7(123)4567890' + ' / koment_zakaza: ' + message.text + '_' + str(message.message_id)
@@ -53,10 +53,10 @@ def vbr(message):
             k = message.message_id
             if (sm == cost and kom == komgl):
                 bot.send_message(message.chat.id, 'красава держи ништяк')
-            print(komgl)
-            print(k)
-            print(kom)
-            print(sm)
+            #print(komgl) выводил для проверки
+            #print(k)
+            #print(kom)
+            #print(sm)
                         
 
 
